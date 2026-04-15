@@ -15,5 +15,5 @@ php/ai_debug.log
 php/config.php
 
 # Local scripts / dev helpers
-_local/
+#_local/
 
