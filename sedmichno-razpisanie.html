@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Седмично разписание – Храм „Света Троица"</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Седмично разписание на богослуженията в храм Света Троица, София.">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://svetatroica.com/sedmichno-razpisanie.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body id="top">
+
+<!-- ═══════ HEADER (same as index) ═══════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Храм Света Троица" loading="lazy">
+        <span>Храм „Света Троица"</span>
+      </a>
+    </div>
+
+    <button class="hamburger" id="hamburger"
+            aria-label="Отвори меню"
+            aria-controls="main-menu"
+            aria-expanded="false"
+            type="button">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="main-menu">
+      <ul>
+        <li><a href="index.html#history">История</a></li>
+        <li><a href="index.html#clergy">Свещенослужители</a></li>
+        <li><a href="index.html#musician">Хор</a></li>
+        <li><a href="sedmichno-razpisanie.html">Служби</a></li>
+        <li><a href="novini.html">Новини</a></li>
+        <li><a href="propovedi.html">Проповеди</a></li>
+        <li><a href="index.html#donations">Дарения</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════ MAIN CONTENT ═══════ -->
+<main class="services-page">
+  <a href="index.html" class="back-link">Начало</a>
+
+  <h1>Седмично разписание</h1>
+  <p class="subtitle">Богослужения в храм „Света Троица" – София</p>
+  <!-- <p class="admin-edit-link"><a href="admin/services.php">✎ Редактиране на служби</a></p> -->
+
+  <!-- week navigation -->
+  <div class="week-nav">
+    <button id="prev-week" title="Предишна седмица"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg> Предишна</button>
+    <span class="week-label" id="week-label"></span>
+    <button id="next-week" title="Следваща седмица">Следваща <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg></button>
+  </div>
+
+  <!-- duty priest for the week -->
+  <div id="duty-priest" class="duty-priest"></div>
+
+  <!-- schedule container – filled by JS -->
+  <div id="schedule-container"></div>
+</main>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="site-footer">
+  <div class="social-links">
+    <a href="https://www.facebook.com/sveta.troica.sofia" target="_blank" rel="noopener">
+      <img src="images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.youtube.com/@SvetaTroica" target="_blank" rel="noopener">
+      <img src="images/youtube.png" alt="YouTube">
+    </a>
+    <a href="http://www.flickr.com/photos/svetatroicasofia/" target="_blank" rel="noopener">
+      <img src="images/flickr.png" alt="Flickr">
+    </a>
+  </div>
+  <p><br>© 2026 Храм „Света Троица"</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/schedule.js?v=6"></script>
+</body>
+</html>
+

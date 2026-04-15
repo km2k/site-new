@@ -1,0 +1,15 @@
+# Disable mod_deflate / mod_gzip for SSE streaming endpoint
+<IfModule mod_deflate.c>
+  <FilesMatch "ai_stream\.php$">
+    SetEnv no-gzip 1
+    SetEnvIfNoCase Request_URI "\.php$" no-gzip
+  </FilesMatch>
+</IfModule>
+
+# Disable LiteSpeed compression for this directory
+<IfModule LiteSpeed>
+  <FilesMatch "ai_stream\.php$">
+    SetEnv no-gzip 1
+  </FilesMatch>
+</IfModule>
+

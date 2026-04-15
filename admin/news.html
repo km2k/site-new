@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Администрация – Новини | Храм „Света Троица"</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/services.css">
+  <link rel="stylesheet" href="../css/news.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body id="top">
+
+<!-- ═══════ HEADER ═══════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="Храм Света Троица" loading="lazy">
+        <span>Храм „Света Троица"</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ MAIN ═══════ -->
+<main class="services-page">
+  <a href="../index.html" class="back-link">Начало</a>
+
+  <h1>Администрация</h1>
+
+  <!-- admin tabs -->
+  <nav class="admin-tabs">
+    <a href="services.html">Служби</a>
+    <a href="news.html" class="active">Новини</a>
+    <a href="users.html">Потребители</a>
+  </nav>
+
+  <!-- ── CREATE / EDIT FORM ── -->
+  <div class="form-panel" id="form-panel">
+    <h3 id="form-title">Нова новина</h3>
+
+    <form id="news-form" autocomplete="off">
+      <input type="hidden" id="edit-id" value="">
+
+      <div class="form-grid">
+        <div class="form-group full">
+          <label for="f-title">Заглавие *</label>
+          <input type="text" id="f-title" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="f-summary">Резюме (кратко)</label>
+          <textarea id="f-summary" rows="2"></textarea>
+        </div>
+
+        <div class="form-group full">
+          <label for="f-body">Пълен текст *</label>
+          <textarea id="f-body" rows="8" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="f-author">Автор</label>
+          <input type="text" id="f-author">
+        </div>
+
+        <div class="form-group">
+          <label for="f-published">Дата на публикуване</label>
+          <input type="datetime-local" id="f-published">
+        </div>
+
+        <div class="form-group full">
+          <label for="f-image">URL на изображение</label>
+          <input type="url" id="f-image" placeholder="https://…">
+        </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" id="f-pinned">
+            <label for="f-pinned">Закачена отгоре (важно)</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" id="f-active" checked>
+            <label for="f-active">Активна (видима)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" id="btn-save">Публикувай</button>
+        <button type="button" class="btn btn-secondary" id="btn-cancel" style="display:none;">Отказ</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ── TABLE ── -->
+  <div class="admin-header-row">
+    <h2>Всички новини</h2>
+  </div>
+
+  <div class="table-wrap">
+    <table class="services-table" id="news-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Заглавие</th>
+          <th>Автор</th>
+          <th>Публикувана</th>
+          <th>Статус</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="news-tbody"></tbody>
+    </table>
+  </div>
+</main>
+
+<!-- toast -->
+<div class="toast" id="toast"></div>
+
+<script src="../js/admin-news.js"></script>
+</body>
+</html>
+

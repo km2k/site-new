@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100" height="120">
+    <!-- Main Vertical Bar -->
+    <rect x="45" y="10" width="10" height="100" fill="black"/>
+    <!-- Top Horizontal Bar -->
+    <rect x="30" y="20" width="40" height="8" fill="black"/>
+    <!-- Middle Horizontal Bar -->
+    <rect x="20" y="40" width="60" height="10" fill="black"/>
+    <!-- Bottom Slanted Bar -->
+    <polygon points="30,80 70,100 65,110 25,90" fill="black"/>
+</svg>

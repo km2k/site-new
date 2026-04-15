@@ -1,0 +1,177 @@
+/* =========================
+   NEWS – styles for the news / announcements page
+   Uses the same theme variables from style.css
+========================= */
+
+/* ---------- search bar ---------- */
+.news-search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.news-search-bar input {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16px;
+  padding: 10px 16px;
+  border: 1px solid rgba(176,144,128,0.45);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text-dark);
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.2s;
+}
+
+.news-search-bar input:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+}
+
+/* ---------- news card ---------- */
+.news-card {
+  background: var(--stone-lighter);
+  border: 1px solid rgba(176,144,128,0.22);
+  border-radius: 8px;
+  margin-bottom: 28px;
+  padding: 28px 32px;
+  transition: box-shadow 0.2s;
+}
+
+.news-card:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.news-card-header {
+  margin-bottom: 16px;
+}
+
+.news-card-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--title);
+  margin: 0 0 8px;
+  text-align: left;
+}
+
+.news-pin-badge {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 12px;
+  font-weight: 600;
+  background: #c0504d;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
+  letter-spacing: 0.03em;
+}
+
+.news-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #8a7b6a;
+}
+
+.news-date::before {
+  content: '📅 ';
+}
+
+.news-author::before {
+  content: '✍ ';
+}
+
+/* ---------- news image ---------- */
+.news-image {
+  margin-bottom: 16px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- summary & body ---------- */
+.news-summary {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5a4a2c;
+  margin-bottom: 14px;
+  line-height: 1.6;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(176,144,128,0.18);
+}
+
+.news-body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-body);
+}
+
+.news-body br + br {
+  display: block;
+  content: '';
+  margin-top: 8px;
+}
+
+/* ---------- states ---------- */
+.news-loading,
+.news-empty,
+.news-error {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 15px;
+}
+
+.news-loading { color: #999; }
+.news-empty   { color: #999; font-style: italic; }
+.news-error   { color: #c0504d; }
+
+/* ---------- load more ---------- */
+.news-more-wrap {
+  text-align: center;
+  margin: 10px 0 40px;
+}
+
+/* ---------- accessibility ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 768px) {
+  .news-card {
+    padding: 20px 18px;
+  }
+
+  .news-card-header h2 {
+    font-size: 19px;
+  }
+
+  .news-image img {
+    max-height: 240px;
+  }
+
+  .news-search-bar input {
+    max-width: 100%;
+  }
+}

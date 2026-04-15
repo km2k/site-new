@@ -1,0 +1,512 @@
+/* =========================
+   ADMIN – additional styles for admin CRUD pages
+   Builds on top of style.css + services.css
+========================= */
+
+/* ---------- admin nav tabs ---------- */
+.admin-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--stone-mid);
+}
+
+.admin-tabs a {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 24px;
+  color: #8a7b6a;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.admin-tabs a:hover {
+  color: var(--title);
+}
+
+.admin-tabs a.active {
+  color: var(--title);
+  border-bottom-color: var(--gold-accent);
+}
+
+/* ---------- admin heading row ---------- */
+.admin-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.admin-header-row h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--title);
+  margin: 0;
+}
+
+/* ---------- form panel ---------- */
+.form-panel {
+  background: var(--stone-lighter);
+  border: 1px solid rgba(176,144,128,0.25);
+  border-radius: 8px;
+  padding: 28px 28px 20px;
+  margin-bottom: 32px;
+}
+
+.form-panel h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--title);
+  margin: 0 0 20px;
+}
+
+/* ---------- inline checkbox ---------- */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 6px;
+}
+
+.form-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold-accent);
+  cursor: pointer;
+}
+
+.form-check label {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+/* ---------- status badges ---------- */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+  letter-spacing: 0.03em;
+}
+
+.badge-active {
+  background: #4a8c5c;
+  color: #fff;
+}
+
+.badge-inactive {
+  background: #999;
+  color: #fff;
+}
+
+.badge-pinned {
+  background: #c0504d;
+  color: #fff;
+}
+
+.badge-recurring {
+  background: var(--gold-accent);
+  color: #fff;
+}
+
+.badge-admin {
+  background: #3d5070;
+  color: #fff;
+}
+
+.badge-user {
+  background: #8a9bb0;
+  color: #fff;
+}
+
+/* ---------- admin user info (header) ---------- */
+.admin-user-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-username {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  color: #e8ddd0;
+  opacity: 0.85;
+}
+
+.admin-logout {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #e8ddd0;
+  padding: 5px 14px;
+  border: 1px solid rgba(232,221,208,0.35);
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-logout:hover {
+  background: rgba(232,221,208,0.15);
+  color: #fff;
+}
+
+/* ---------- login page ---------- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.login-card {
+  background: var(--stone-lighter);
+  border: 1px solid rgba(176,144,128,0.25);
+  border-radius: 10px;
+  padding: 40px 44px 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.login-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--title);
+  margin-bottom: 6px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #8a7b6a;
+  margin-bottom: 28px;
+}
+
+.login-card .form-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.login-error {
+  color: #c0504d;
+  font-size: 14px;
+  min-height: 20px;
+  margin-bottom: 12px;
+}
+
+/* ---------- table overflow wrapper ---------- */
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+/* ---------- confirm dialog ---------- */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6000;
+}
+
+.confirm-box {
+  background: var(--stone-lighter);
+  border-radius: 8px;
+  padding: 28px 32px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+.confirm-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.confirm-box .form-actions {
+  justify-content: center;
+}
+
+/* ---------- admin week editor ---------- */
+.admin-service-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-service-detail {
+  flex: 1;
+  min-width: 200px;
+}
+
+.admin-service-detail select {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid rgba(176,144,128,0.45);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text-dark);
+  width: 100%;
+}
+
+.admin-service-detail select:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 768px) {
+
+  /* ── tabs: equal width, scrollable if needed ── */
+  .admin-tabs {
+    gap: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-tabs a {
+    font-size: 11px;
+    padding: 10px 12px;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* ── form panel ── */
+  .form-panel {
+    padding: 18px 14px 16px;
+    margin-bottom: 24px;
+  }
+
+  .form-panel h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  /* ── form inputs: larger touch targets ── */
+  .form-group label {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;          /* prevents iOS zoom on focus */
+    padding: 12px 12px;
+    border-radius: 6px;
+  }
+
+  .form-check {
+    padding: 10px 0;
+    min-height: 44px;         /* comfortable touch target */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-check input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .form-check label {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* ── form actions: full-width buttons ── */
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* ── heading row ── */
+  .admin-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-header-row h2 {
+    font-size: 18px;
+  }
+
+  /* ── header user info ── */
+  .admin-user-info {
+    gap: 8px;
+  }
+
+  .admin-username {
+    display: none;            /* hide username to save space */
+  }
+
+  .admin-logout {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  /* ── table → card layout on mobile ── */
+  .table-wrap {
+    overflow-x: visible;
+  }
+
+  .services-table {
+    display: block;
+    font-size: 14px;
+  }
+
+  .services-table thead {
+    display: none;            /* hide table header */
+  }
+
+  .services-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .services-table tr {
+    display: flex;
+    flex-direction: column;
+    background: var(--stone-lighter);
+    border: 1px solid rgba(176,144,128,0.22);
+    border-radius: 10px;
+    padding: 18px 18px 14px;
+    gap: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .services-table tr:hover td {
+    background: transparent;
+  }
+
+  .services-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(176,144,128,0.10);
+    font-size: 14px;
+    line-height: 1.6;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .services-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* label each cell with the column header */
+  .services-table td::before {
+    content: attr(data-label);
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #8a7b6a;
+    flex-shrink: 0;
+    min-width: 100px;
+    margin-right: 12px;
+    padding-top: 2px;
+  }
+
+  /* ── badges: larger touch targets, stacked ── */
+  .badge {
+    font-size: 11px;
+    padding: 4px 12px;
+    display: inline-block;
+    margin: 2px 0;
+  }
+
+  /* status cell: stack badges vertically */
+  .services-table td[data-label="Статус"],
+  .services-table td[data-label="Роля"] {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* actions row: prominent full-width buttons */
+  .services-table td.actions,
+  .services-table .actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 14px 0 4px;
+    border-top: 1px solid rgba(176,144,128,0.20);
+    border-bottom: none;
+    margin-top: 6px;
+  }
+
+  .services-table .actions::before {
+    display: none;
+  }
+
+  .services-table .actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    min-height: 44px;         /* iOS recommended touch target */
+  }
+
+  /* ── login page ── */
+  .login-card {
+    padding: 28px 22px 24px;
+  }
+
+  /* ── toast: wider on mobile ── */
+  .toast {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+    text-align: center;
+  }
+
+  /* ── confirm dialog ── */
+  .confirm-box {
+    padding: 24px 20px;
+  }
+
+  .confirm-box .form-actions {
+    flex-direction: row;
+  }
+
+  .confirm-box .form-actions .btn {
+    width: auto;
+    flex: 1;
+  }
+}
+

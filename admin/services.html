@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Администрация – Служби | Храм „Света Троица"</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/services.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body id="top">
+
+<!-- ═══════ HEADER ═══════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="Храм Света Троица" loading="lazy">
+        <span>Храм „Света Троица"</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ MAIN ═══════ -->
+<main class="services-page">
+  <a href="../index.html" class="back-link">Начало</a>
+
+  <h1>Администрация</h1>
+
+  <!-- admin tabs -->
+  <nav class="admin-tabs">
+    <a href="services.html" class="active">Служби</a>
+    <a href="news.html">Новини</a>
+    <a href="users.html">Потребители</a>
+  </nav>
+
+  <!-- ── CREATE / EDIT FORM ── -->
+  <div class="form-panel" id="form-panel">
+    <h3 id="form-title">Нова служба</h3>
+
+    <form id="service-form" autocomplete="off">
+      <input type="hidden" id="edit-id" value="">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="f-title">Наименование *</label>
+          <input type="text" id="f-title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="f-date">Дата *</label>
+          <input type="date" id="f-date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="f-start">Начален час *</label>
+          <input type="time" id="f-start" required>
+        </div>
+
+        <div class="form-group">
+          <label for="f-end">Краен час</label>
+          <input type="time" id="f-end">
+        </div>
+
+        <div class="form-group">
+          <label for="f-day">Ден от седмицата *</label>
+          <select id="f-day" required>
+            <option value="1">Понеделник</option>
+            <option value="2">Вторник</option>
+            <option value="3">Сряда</option>
+            <option value="4">Четвъртък</option>
+            <option value="5">Петък</option>
+            <option value="6">Събота</option>
+            <option value="7">Неделя</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="f-priest">Свещенослужител</label>
+          <input type="text" id="f-priest">
+        </div>
+
+        <div class="form-group">
+          <label for="f-location">Място</label>
+          <input type="text" id="f-location" value="Централен кораб">
+        </div>
+
+        <div class="form-group full">
+          <label for="f-desc">Описание</label>
+          <textarea id="f-desc" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" id="f-recurring">
+            <label for="f-recurring">Повтаря се всяка седмица</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" id="f-active" checked>
+            <label for="f-active">Активна (видима)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" id="btn-save">Запази</button>
+        <button type="button" class="btn btn-secondary" id="btn-cancel" style="display:none;">Отказ</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ── TABLE ── -->
+  <div class="admin-header-row">
+    <h2>Всички служби</h2>
+  </div>
+
+  <div class="table-wrap">
+    <table class="services-table" id="services-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Наименование</th>
+          <th>Дата</th>
+          <th>Час</th>
+          <th>Ден</th>
+          <th>Свещеник</th>
+          <th>Статус</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="services-tbody"></tbody>
+    </table>
+  </div>
+</main>
+
+<!-- toast -->
+<div class="toast" id="toast"></div>
+
+<script src="../js/admin-services.js"></script>
+</body>
+</html>
+

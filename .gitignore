@@ -1,0 +1,19 @@
+# Archives
+*.zip
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+php/ai_debug.log
+
+# Sensitive config (use config.example.php as template)
+php/config.php
+
+# Local scripts / dev helpers
+_local/
+
