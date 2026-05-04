@@ -10,9 +10,12 @@
 
   const container  = document.getElementById('schedule-container');
   const weekLabel  = document.getElementById('week-label');
+  const weekLabelBottom = document.getElementById('week-label-bottom');
   const dutyPriest = document.getElementById('duty-priest');
   const btnPrev    = document.getElementById('prev-week');
   const btnNext    = document.getElementById('next-week');
+  const btnPrevBottom = document.getElementById('prev-week-bottom');
+  const btnNextBottom = document.getElementById('next-week-bottom');
 
   // Current Monday (ISO week start)
   let currentMonday = getMonday(new Date());
@@ -52,6 +55,7 @@
     const to   = sun.toLocaleDateString('bg-BG', opts);
     const year = sun.getFullYear();
     weekLabel.textContent = from + ' – ' + to + ' ' + year;
+    if (weekLabelBottom) weekLabelBottom.textContent = weekLabel.textContent;
   }
 
   /* ── render ───────────────────────────────── */
@@ -179,15 +183,13 @@
 
   /* ── events ───────────────────────────────── */
 
-  btnPrev.addEventListener('click', () => {
-    currentMonday = addDays(currentMonday, -7);
-    loadWeek();
-  });
+  btnPrev.addEventListener('click', goBack);
+  btnNext.addEventListener('click', goForward);
+  if (btnPrevBottom) btnPrevBottom.addEventListener('click', goBack);
+  if (btnNextBottom) btnNextBottom.addEventListener('click', goForward);
 
-  btnNext.addEventListener('click', () => {
-    currentMonday = addDays(currentMonday, 7);
-    loadWeek();
-  });
+  function goBack() { currentMonday = addDays(currentMonday, -7); loadWeek(); }
+  function goForward() { currentMonday = addDays(currentMonday, 7); loadWeek(); }
 
   // initial load
   loadWeek();

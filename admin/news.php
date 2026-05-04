@@ -16,7 +16,7 @@ $user = currentUser();
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/style.css">
@@ -51,7 +51,7 @@ $user = currentUser();
 
   <!-- admin tabs -->
   <nav class="admin-tabs">
-    <a href="/admin/services.php">Служби</a>
+    <a href="/admin/services.php">График</a>
     <a href="/admin/news.php" class="active">Новини</a>
     <a href="/admin/users.php">Потребители</a>
   </nav>
