@@ -304,6 +304,7 @@ img, iframe { max-width: 100%; }
 .info-box p {
   color: #3b2e20;
   font-size: 15px;
+  font-family: 'Lora', Georgia, serif;
 }
 
 .info-box a {
